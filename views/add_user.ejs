@@ -1,0 +1,16 @@
+<% include partials/header %>
+    <div class="addUser">
+        <h1><%= title %></h1>
+        <form method="POST" action="/user/add">
+            <label for="firstName">First Name</label><br>
+            <input type="text" name="firstName" class="form-control"><br>
+            <label for="lastName">Last Name</label><br>
+            <input type="text" name="lastName" class="form-control"><br>
+            <label for="email">Email</label><br>
+            <input type="text" name="email" class="form-control"><br>
+            <label for="bio">Biography</label><br>
+            <input type="text" name="bio" class="form-control"><br>
+            <input type="submit" value="Submit" class="btn btn-success"><br><br>
+        </form>
+    <div>
+<% include partials/footer %>

@@ -1,0 +1,21 @@
+<% include partials/header %>
+    <div class="wrapper">
+        <h1><%= title %></h1>
+
+        <% users.forEach(function(user){ %>
+            <div class="panel panel-default">
+                <div class="panel-body"> <a href="/user/" > <%= user.firstName %> <%= user.lastName %> </a> </div>
+            </div>
+        <% }) %>
+
+        <ul class="list-group">
+            <% users.forEach(function(user){ %>
+                <li class="list-group-item"> 
+                    <%= user.firstName %> <%= user.lastName %> 
+                    <a href="#" class="deleteUser" data-id = "<%= user._id %>"> | Delete |</a>
+                    <a href="/user/edit/<%= user._id %>" class="">Edit</a> 
+                </li>
+            <% }) %>
+        </ul>
+    <div>
+<% include partials/footer %>
